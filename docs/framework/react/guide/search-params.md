@@ -205,7 +205,7 @@ An adapter is provided for [Zod](https://zod.dev/) which will pipe through the c
 
 ```tsx
 import { createFileRoute } from '@tanstack/react-router'
-import { zodValidator } from '@tanstack/zod-adapter'
+import { zodValidator } from '@tanstack/zod-form-adapter'
 import { z } from 'zod'
 
 const productSearchSchema = z.object({
@@ -229,7 +229,7 @@ However the use of `catch` here overrides the types and makes `page`, `filter` a
 
 ```tsx
 import { createFileRoute } from '@tanstack/react-router'
-import { fallback, zodValidator } from '@tanstack/zod-adapter'
+import { fallback, zodValidator } from '@tanstack/zod-form-adapter'
 import { z } from 'zod'
 
 const productSearchSchema = z.object({
@@ -538,7 +538,7 @@ The following example shows how to make sure that for **every** link that is bei
 ```tsx
 import { z } from 'zod'
 import { createFileRoute } from '@tanstack/react-router'
-import { zodValidator } from '@tanstack/zod-adapter'
+import { zodValidator } from '@tanstack/zod-form-adapter'
 
 const searchSchema = z.object({
   rootValue: z.string().optional(),
@@ -565,7 +565,7 @@ Since this specific use case is quite common, TanStack Router provides a generic
 ```tsx
 import { z } from 'zod'
 import { createFileRoute, retainSearchParams } from '@tanstack/react-router'
-import { zodValidator } from '@tanstack/zod-adapter'
+import { zodValidator } from '@tanstack/zod-form-adapter'
 
 const searchSchema = z.object({
   rootValue: z.string().optional(),
@@ -584,7 +584,7 @@ Another common use case is to strip out search params from links if their defaul
 ```tsx
 import { z } from 'zod'
 import { createFileRoute, stripSearchParams } from '@tanstack/react-router'
-import { zodValidator } from '@tanstack/zod-adapter'
+import { zodValidator } from '@tanstack/zod-form-adapter'
 
 const defaultValues = {
   one: 'abc',
@@ -615,7 +615,7 @@ import {
   stripSearchParams,
 } from '@tanstack/react-router'
 import { z } from 'zod'
-import { zodValidator } from '@tanstack/zod-adapter'
+import { zodValidator } from '@tanstack/zod-form-adapter'
 
 const defaultValues = ['foo', 'bar']
 
